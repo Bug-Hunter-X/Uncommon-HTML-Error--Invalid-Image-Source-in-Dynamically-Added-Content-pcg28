@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.</p><img src='invalid-image.jpg' alt='Broken Image'>";
+  </script>
+</body>
+</html>
