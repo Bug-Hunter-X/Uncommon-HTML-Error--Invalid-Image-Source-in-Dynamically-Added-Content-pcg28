@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    const myDiv = document.getElementById("myDiv");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a paragraph.";
+    myDiv.appendChild(newParagraph);
+
+    const newImage = document.createElement("img");
+    newImage.alt = "My Image";
+    newImage.onerror = function() {
+      console.error('Failed to load image.');
+      this.style.display = 'none'; // Hide the broken image
+    };
+    newImage.src = 'valid-image.jpg'; //Replace with a valid image path
+    myDiv.appendChild(newImage);
+  </script>
+</body>
+</html>
